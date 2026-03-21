@@ -6,7 +6,7 @@ A API fornece toda a estrutura necessária para o funcionamento da aplicação w
 
 ---
 
-## 🚀 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - Node.js
 - Express.js
@@ -18,7 +18,7 @@ A API fornece toda a estrutura necessária para o funcionamento da aplicação w
 
 ---
 
-## 📦 Funcionalidades
+##  Funcionalidades
 
 A API oferece suporte para:
 
@@ -36,6 +36,6 @@ A API oferece suporte para:
 
 ---
 
-## 🏗️ Arquitetura
+##  Arquitetura
 
 A aplicação segue o padrão de arquitetura baseado em **API REST**.
