@@ -1,0 +1,42 @@
+{
+  "name": "datagenda",
+  "version": "1.0.0",
+  "description": "Sistema ERP de Agendamento Online - Datagenda",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "prod": "NODE_ENV=production node src/server.js",
+    "test": "echo \"No tests configured yet\""
+  },
+  "keywords": [
+    "erp",
+    "agendamento",
+    "saas",
+    "node",
+    "express",
+    "postgres"
+  ],
+  "author": "Bruner",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "multer": "^1.4.5-lts.2",
+    "nodemailer": "^7.0.3",
+    "pdfmake": "^0.2.20",
+    "pg": "^8.15.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

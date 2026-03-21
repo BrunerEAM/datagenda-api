@@ -1,0 +1,66 @@
+
+BASE DE CONHECIMENTO SOBRE SEEDS (PARA DESENVOLVEDORES)
+
+O que é um seed? 
+No contexto de banco de dados, "seed" (do inglês semente) é um script que insere dados iniciais automaticamente.
+
+Para que serve?
+
+-Popular o banco com dados fictícios (ex: nomes de clientes, produtos etc)
+
+-Testar funcionalidades (filtros, listagens, exportações)
+
+-Evitar precisar cadastrar tudo manualmente após cada reset do banco
+
+🛠 Como usar um seed no Knex?
+
+Primeiramente ver o arquivo Knexfile.js para ver qual o dieretório do Seed.
+
+1- Criar um arquivo seed: npx knex seed:make seed_clientes
+
+2- Rodar o seed: npx knex seed:run
+
+3- Se quiser rodar somente um seed específico: npx knex seed:run --specific=seed_clientes.js
+
+Exemplo de Seeds criado;
+
+// seeds/seed_clientes.js
+
+exports.seed = async function (knex) {
+  // Limpa os dados existentes (em ambiente de desenvolvimento/teste)
+  await knex("clientes").del();
+
+  // Insere registros fictícios
+  await knex("clientes").insert([
+    {
+      nome: "João da Silva",
+      email: "joao@email.com",
+      cpf: "12345678900",
+      telefone: "11999999999",
+      nascimento: "1985-04-10",
+      cidade: "São Paulo",
+      estado: "SP",
+      bairro: "Centro",
+      rua: "Rua A",
+      numero: "100",
+      ativo: true,
+    },
+    {
+      nome: "Maria Oliveira",
+      email: "maria@email.com",
+      cpf: "98765432100",
+      telefone: "11988888888",
+      nascimento: "1990-08-22",
+      cidade: "Rio de Janeiro",
+      estado: "RJ",
+      bairro: "Copacabana",
+      rua: "Av. Atlântica",
+      numero: "2000",
+      ativo: true,
+    }
+  ]);
+};
+
+
+
+
